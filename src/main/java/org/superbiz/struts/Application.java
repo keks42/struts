@@ -19,7 +19,8 @@ public class Application {
     }
 
     @Bean
-    public FilterRegistrationBean siteMeshFilter(FilterRegistrationBean bean) {
+    public FilterRegistrationBean siteMeshFilter() {
+        FilterRegistrationBean bean = new FilterRegistrationBean();
         bean.setFilter(new SiteMeshFilter());
         bean.setUrlPatterns(Arrays.asList(
                 "/*"
@@ -31,7 +32,8 @@ public class Application {
     }
 
     @Bean
-    public FilterRegistrationBean strutsPrepareAndExecuteFilter(FilterRegistrationBean bean) {
+    public FilterRegistrationBean strutsPrepareAndExecuteFilter() {
+        FilterRegistrationBean bean = new FilterRegistrationBean();
         StrutsPrepareAndExecuteFilter filter = new StrutsPrepareAndExecuteFilter();
         bean.setFilter(filter);
         bean.setUrlPatterns(Arrays.asList(
