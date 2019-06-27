@@ -25,6 +25,8 @@ public class Application {
         bean.setUrlPatterns(Arrays.asList(
                 "/*"
         ));
+        bean.setOrder(1);
+
         Map<String, String> params = new HashMap<>();
         params.put("actionPackages", "com.lq");
         bean.setInitParameters(params);
@@ -36,6 +38,7 @@ public class Application {
         FilterRegistrationBean bean = new FilterRegistrationBean();
         StrutsPrepareAndExecuteFilter filter = new StrutsPrepareAndExecuteFilter();
         bean.setFilter(filter);
+        bean.setOrder(2);
         bean.setUrlPatterns(Arrays.asList(
                 "/",
                 "/addUserForm.action",

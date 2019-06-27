@@ -1,0 +1,8 @@
+---
+applications:
+- name: struts
+  services:
+  - struts-mysql
+  path: target/struts.war
+  routes:
+  - route: struts-42.apps.evans.pal.pivotal.io
